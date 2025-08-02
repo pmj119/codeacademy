@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeCraft Academy - Full Stack Web Development Program</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles to enhance Tailwind */
+        body {
+            font-family: 'Poppins', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #4f46e5, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .section-icon {
+            width: 48px;
+            height: 48px;
+        }
+        .capstone-badge {
+            background-color: rgba(79, 70, 229, 0.1);
+            color: #6366f1;
+            border: 1px solid rgba(79, 70, 229, 0.2);
+        }
+        /* Styles for the modal and loader */
+        .modal-loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #6366f1;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <!-- Main Container -->
+    <div class="container mx-auto max-w-4xl p-4 sm:p-8">
+
+        <!-- PAGE 1: HEADER / FRONT PANEL -->
+        <header class="text-center bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 sm:p-12 border border-gray-700 shadow-2xl shadow-indigo-500/10">
+            <h1 class="text-4xl sm:text-5xl font-bold gradient-text mb-2">CodeCraft Academy</h1>
+            <h2 class="text-2xl sm:text-3xl font-semibold text-white mb-4">🚀 Full Stack Web Development Program</h2>
+            <p class="text-lg sm:text-xl text-indigo-300 font-medium mb-6 bg-indigo-500/10 px-4 py-2 rounded-lg inline-block">🎯 Job-Ready in 5–6 Months | ₹8–12 LPA Placement Guarantee</p>
+            <div class="text-center mt-6">
+                <div class="bg-gray-900 rounded-xl p-4 inline-flex flex-col sm:flex-row items-center gap-4 border border-gray-700">
+                    <p class="text-lg font-semibold text-white">📞 Contact: <a href="tel:9800657070" class="hover:text-indigo-400">9800657070</a> (Call/WhatsApp/UPI)</p>
+                    <a href="https://wa.me/919800657070" target="_blank" class="bg-green-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-green-600 transition-colors">Chat on WhatsApp</a>
+                </div>
+            </div>
+            <div class="mt-8">
+                <p class="text-xl font-bold text-amber-400 border-2 border-amber-400/50 rounded-full px-6 py-3 inline-block">
+                    100% Job Guarantee or Full Refund
+                </p>
+            </div>
+        </header>
+
+        <!-- PAGE 2: COURSE OVERVIEW -->
+        <section class="my-16">
+            <h3 class="text-3xl font-bold text-center mb-8 text-white">💡 Course Overview</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                 <!-- Cards for course details -->
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-indigo-500 transition-all transform hover:-translate-y-1"><h4 class="font-bold text-lg text-indigo-400 mb-2">Duration</h4><p class="text-gray-300">5–6 Months</p></div>
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-indigo-500 transition-all transform hover:-translate-y-1"><h4 class="font-bold text-lg text-indigo-400 mb-2">Mode</h4><p class="text-gray-300">Live Online Classes</p></div>
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-indigo-500 transition-all transform hover:-translate-y-1"><h4 class="font-bold text-lg text-indigo-400 mb-2">Level</h4><p class="text-gray-300">Beginner to Advanced</p></div>
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-indigo-500 transition-all transform hover:-translate-y-1"><h4 class="font-bold text-lg text-indigo-400 mb-2">Timing</h4><p class="text-gray-300">Evening & Weekend</p></div>
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-indigo-500 transition-all transform hover:-translate-y-1"><h4 class="font-bold text-lg text-indigo-400 mb-2">Next Batch</h4><p class="text-gray-300">Starting Soon!</p></div>
+                <div class="bg-gray-800 p-6 rounded-xl border-2 border-amber-400/80 hover:bg-amber-400/10 transition-all transform hover:-translate-y-1"><h4 class="font-bold text-lg text-amber-400 mb-2">Guarantee</h4><p class="text-gray-300">100% Job or Full Refund</p></div>
+            </div>
+            <div class="mt-8 bg-gray-800 p-6 rounded-xl border border-gray-700">
+                <h4 class="text-xl font-bold text-center text-indigo-400 mb-3">🎯 Program Objective</h4>
+                <p class="text-center text-gray-300 max-w-2xl mx-auto">This course is built for working professionals and fresh graduates who want to transition into tech roles with confidence. You’ll master the full stack—from frontend to backend, databases, deployment, and job preparation.</p>
+            </div>
+        </section>
+
+        <!-- PAGE 3-5: CORE MODULES -->
+        <section class="my-16">
+            <h3 class="text-3xl font-bold text-center mb-8 text-white">Core Modules & Bonuses</h3>
+            <div class="space-y-8">
+                <!-- Module: Frontend -->
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+                    <h4 class="text-2xl font-semibold text-pink-400 mb-3">🧑‍💻 Frontend Development</h4>
+                    <ul class="list-disc list-inside text-gray-300 mb-4 pl-2 space-y-1">
+                        <li>HTML5, CSS3, Flexbox, Grid</li>
+                        <li>JavaScript (ES6+), DOM, Events</li>
+                        <li>Git & GitHub for version control</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-4 items-center">
+                        <div class="capstone-badge font-semibold py-2 px-4 rounded-lg inline-block">🔧 Capstone: Personal Portfolio Website</div>
+                        <button class="generate-ideas-btn bg-indigo-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-indigo-700 transition-transform transform hover:scale-105" data-module="Frontend Development using HTML, CSS, and JavaScript">✨ Get Project Ideas</button>
+                    </div>
+                </div>
+
+                <!-- Module: React.js -->
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+                    <h4 class="text-2xl font-semibold text-cyan-400 mb-3">⚛️ React.js Development</h4>
+                    <ul class="list-disc list-inside text-gray-300 mb-4 pl-2 space-y-1">
+                        <li>JSX, Components, Props, State</li>
+                        <li>React Hooks, Context API, Routing, Axios</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-4 items-center">
+                        <div class="capstone-badge font-semibold py-2 px-4 rounded-lg inline-block">🔧 Capstone: Task Management App</div>
+                        <button class="generate-ideas-btn bg-indigo-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-indigo-700 transition-transform transform hover:scale-105" data-module="React.js Development">✨ Get Project Ideas</button>
+                    </div>
+                </div>
+
+                <!-- Module: Backend -->
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+                    <h4 class="text-2xl font-semibold text-emerald-400 mb-3">🔙 Backend with Node.js & Express</h4>
+                    <ul class="list-disc list-inside text-gray-300 mb-4 pl-2 space-y-1">
+                        <li>REST APIs, Routing, Middleware</li>
+                        <li>Environment Setup, Modular Code</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-4 items-center">
+                        <div class="capstone-badge font-semibold py-2 px-4 rounded-lg inline-block">🔧 Capstone: E-Commerce REST API</div>
+                        <button class="generate-ideas-btn bg-indigo-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-indigo-700 transition-transform transform hover:scale-105" data-module="Backend Development with Node.js & Express">✨ Get Project Ideas</button>
+                    </div>
+                </div>
+
+                <!-- Module: Database -->
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+                    <h4 class="text-2xl font-semibold text-orange-400 mb-3">🗃️ Database (MongoDB + Mongoose)</h4>
+                    <ul class="list-disc list-inside text-gray-300 mb-4 pl-2 space-y-1">
+                        <li>CRUD Operations, Schema Design</li>
+                        <li>Aggregation & Query Optimization</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-4 items-center">
+                        <div class="capstone-badge font-semibold py-2 px-4 rounded-lg inline-block">🔧 Capstone: MERN Stack Notes App</div>
+                        <button class="generate-ideas-btn bg-indigo-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-indigo-700 transition-transform transform hover:scale-105" data-module="MERN Stack (MongoDB, Express, React, Node.js)">✨ Get Project Ideas</button>
+                    </div>
+                </div>
+                
+                <!-- Other modules without idea generator -->
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700"><h4 class="text-2xl font-semibold text-red-400 mb-3">🔐 Authentication & Security</h4><ul class="list-disc list-inside text-gray-300 mb-4 pl-2 space-y-1"><li>JSON Web Tokens (JWT), bcrypt for hashing</li><li>Role-Based Access Control</li><li>Input Validation & Security Best Practices</li></ul><div class="capstone-badge font-semibold py-2 px-4 rounded-lg inline-block">🔧 Capstone: Admin Dashboard with Auth</div></div>
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700"><h4 class="text-2xl font-semibold text-purple-400 mb-3">🌍 Deployment & Hosting</h4><ul class="list-disc list-inside text-gray-300 mb-4 pl-2 space-y-1"><li>Netlify & Vercel (Frontend)</li><li>Render for Backend Hosting</li><li>MongoDB Atlas Integration</li></ul><div class="capstone-badge font-semibold py-2 px-4 rounded-lg inline-block">🔧 Capstone: Live Deployed Full Stack App</div></div>
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700"><h4 class="text-2xl font-semibold text-yellow-400 mb-3">🎁 Bonus Modules</h4><ul class="list-disc list-inside text-gray-300 pl-2 space-y-1"><li>TypeScript Introduction</li><li>Real-Time Chat App (Socket.io)</li><li>Open Source Contributions</li><li>GitHub Profile Optimization</li></ul></div>
+            </div>
+        </section>
+
+        <!-- PAGE 6: PLACEMENT + ENROLLMENT -->
+        <section class="my-16">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Career Support -->
+                <div class="bg-gray-800 p-8 rounded-xl border border-gray-700"><h3 class="text-3xl font-bold mb-6 text-white text-center">💼 Career Support</h3><ul class="space-y-3"><li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✓</span> Resume & LinkedIn Optimization</li><li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✓</span> Mock Technical & HR Interviews</li><li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✓</span> GitHub + Portfolio Review</li><li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✓</span> Career Guidance & 1:1 Mentorship</li></ul></div>
+                <!-- Certification & Job Guarantee -->
+                <div class="bg-gray-800 p-8 rounded-xl border border-gray-700"><h3 class="text-3xl font-bold mb-6 text-white text-center">🎓 Certification & Job Guarantee</h3><ul class="space-y-3 mb-4"><li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✓</span> CodeCraft Full Stack Developer Certificate</li><li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✓</span> Placement in Top Companies (TCS, Zoho, Accenture & more)</li><li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✓</span> Guaranteed ₹8–12 LPA Job Offers</li></ul><div class="text-center mt-6 font-bold text-amber-400 border border-amber-400/50 rounded-lg p-3">✅ Full Refund if Not Placed</div></div>
+            </div>
+        </section>
+
+        <!-- Enrollment Call to Action -->
+        <footer class="text-center bg-indigo-600/90 rounded-2xl p-8 sm:p-12 border border-indigo-500 shadow-lg shadow-indigo-500/20">
+            <h3 class="text-3xl font-bold text-white mb-4">Ready to Launch Your Tech Career?</h3>
+            <p class="text-indigo-200 mb-2">Limited Seats Available for the Next Batch!</p>
+            <p class="text-indigo-200 mb-6">DM us on WhatsApp for a free counselling call.</p>
+            <div class="bg-white rounded-xl p-4 inline-flex flex-col sm:flex-row items-center gap-4">
+                <p class="text-lg font-semibold text-gray-800">UPI Payments to: <span class="text-indigo-600">9800657070</span></p>
+                <a href="https://wa.me/919800657070?text=Hi%20CodeCraft!%20I'm%20interested%20in%20the%20Full%20Stack%20program." target="_blank" class="bg-indigo-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-indigo-700 transition-transform transform hover:scale-105">Enroll Now</a>
+            </div>
+            <p class="mt-6 text-indigo-100 font-semibold">Fast-track your IT career starting today!</p>
+        </footer>
+    </div>
+
+    <!-- Gemini Project Ideas Modal -->
+    <div id="ideas-modal" class="hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center p-4 z-50">
+        <div class="bg-gray-800 rounded-2xl border border-gray-700 shadow-2xl w-full max-w-2xl max-h-[90vh] flex flex-col">
+            <div class="p-6 border-b border-gray-700 flex justify-between items-center">
+                <h3 id="modal-title" class="text-2xl font-bold text-white">Project Ideas</h3>
+                <button id="close-modal-btn" class="text-gray-400 hover:text-white">&times;</button>
+            </div>
+            <div id="modal-content" class="p-6 overflow-y-auto">
+                <!-- Loader -->
+                <div id="modal-loader" class="flex flex-col items-center justify-center h-64">
+                    <div class="modal-loader"></div>
+                    <p class="mt-4 text-lg text-gray-300">✨ Generating creative ideas...</p>
+                </div>
+                <!-- Results -->
+                <div id="modal-results" class="hidden"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- Modal Handling ---
+        const modal = document.getElementById('ideas-modal');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+        const generateIdeaBtns = document.querySelectorAll('.generate-ideas-btn');
+        const modalTitle = document.getElementById('modal-title');
+        const modalLoader = document.getElementById('modal-loader');
+        const modalResults = document.getElementById('modal-results');
+
+        // Function to open the modal
+        const openModal = () => modal.classList.remove('hidden');
+
+        // Function to close the modal
+        const closeModal = () => modal.classList.add('hidden');
+
+        closeModalBtn.addEventListener('click', closeModal);
+        // Close modal if clicking outside the content
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // --- Gemini API Integration ---
+        const apiKey = ""; // API key is handled by the environment
+
+        /**
+         * Fetches project ideas from the Gemini API with exponential backoff.
+         * @param {string} moduleName - The name of the course module.
+         * @param {number} retries - The number of retries left.
+         * @param {number} delay - The delay in ms before the next retry.
+         */
+        async function getProjectIdeas(moduleName, retries = 3, delay = 1000) {
+            // 1. Set up the UI for loading state
+            modalTitle.textContent = `Ideas for ${moduleName}`;
+            modalResults.innerHTML = '';
+            modalResults.classList.add('hidden');
+            modalLoader.classList.remove('hidden');
+            openModal();
+
+            // 2. Define the prompt and the desired JSON structure for the response
+            const prompt = `Generate exactly 3 unique and creative capstone project ideas for a student learning ${moduleName}. For each idea, provide a catchy title and a short, one-paragraph description of the project's features and purpose. The ideas should be impressive for a portfolio.`;
+            
+            const chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
+
+            const payload = {
+                contents: chatHistory,
+                generationConfig: {
+                    responseMimeType: "application/json",
+                    responseSchema: {
+                        type: "OBJECT",
+                        properties: {
+                            "projects": {
+                                "type": "ARRAY",
+                                "items": {
+                                    "type": "OBJECT",
+                                    "properties": {
+                                        "title": { "type": "STRING" },
+                                        "description": { "type": "STRING" }
+                                    },
+                                    required: ["title", "description"]
+                                }
+                            }
+                        },
+                        required: ["projects"]
+                    }
+                }
+            };
+
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+
+            // 3. Make the API call with retry logic
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`API request failed with status ${response.status}`);
+                }
+
+                const result = await response.json();
+                
+                // 4. Process the successful response
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    
+                    const jsonText = result.candidates[0].content.parts[0].text;
+                    const parsedJson = JSON.parse(jsonText);
+                    displayIdeas(parsedJson.projects);
+
+                } else {
+                    throw new Error("No content found in API response.");
+                }
+
+            } catch (error) {
+                console.error("Error fetching project ideas:", error);
+                if (retries > 0) {
+                    // Wait for the delay and retry
+                    setTimeout(() => getProjectIdeas(moduleName, retries - 1, delay * 2), delay);
+                } else {
+                    // Show an error message if all retries fail
+                    displayError("Sorry, we couldn't generate ideas right now. Please try again later.");
+                }
+            }
+        }
+
+        /**
+         * Displays the generated project ideas in the modal.
+         * @param {Array<Object>} ideas - An array of project idea objects.
+         */
+        function displayIdeas(ideas) {
+            modalLoader.classList.add('hidden');
+            if (!ideas || ideas.length === 0) {
+                 displayError("No ideas were generated. Please try again.");
+                 return;
+            }
+            
+            const ideasHtml = ideas.map(idea => `
+                <div class="bg-gray-900 p-4 rounded-lg border border-gray-700 mb-4">
+                    <h4 class="text-xl font-bold text-indigo-400 mb-2">${idea.title}</h4>
+                    <p class="text-gray-300">${idea.description}</p>
+                </div>
+            `).join('');
+
+            modalResults.innerHTML = ideasHtml;
+            modalResults.classList.remove('hidden');
+        }
+
+        /**
+         * Displays an error message in the modal.
+         * @param {string} message - The error message to display.
+         */
+        function displayError(message) {
+            modalLoader.classList.add('hidden');
+            modalResults.innerHTML = `<div class="text-center text-red-400 p-8">${message}</div>`;
+            modalResults.classList.remove('hidden');
+        }
+
+        // Add event listeners to all "Get Project Ideas" buttons
+        generateIdeaBtns.forEach(button => {
+            button.addEventListener('click', () => {
+                const moduleName = button.dataset.module;
+                getProjectIdeas(moduleName);
+            });
+        });
+
+    </script>
+</body>
+</html>
